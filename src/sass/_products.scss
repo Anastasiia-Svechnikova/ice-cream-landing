@@ -1,0 +1,36 @@
+.products {
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  &__label {
+    margin-bottom: 15px;
+    font-family: 'Titan One', cursive;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+    color: $secondary-heading-color;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $primary-heading-color;
+  }
+
+  &__item {
+    background: #ffb8ca;
+    border-radius: 24px;
+    width: 280px;
+    height: 489px;
+  }
+}
