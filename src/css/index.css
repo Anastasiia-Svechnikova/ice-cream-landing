@@ -142,15 +142,6 @@ a {
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
-.products__title::before {
-  content: "";
-  background-size: contain;
-  display: block;
-  width: 280px;
-  height: 280px;
-  background-repeat: no-repeat;
-  position: absolute;
-}
 .products__list {
   display: block;
 }
@@ -192,14 +183,6 @@ a {
   background-repeat: no-repeat;
   position: absolute;
 }
-.products__image {
-  position: absolute;
-  top: 0;
-  margin-bottom: 20px;
-}
-.products__icon {
-  margin-bottom: 32px;
-}
 .products__text {
   margin-bottom: 32px;
   font-family: "DM Sans";
@@ -209,6 +192,18 @@ a {
   text-align: center;
   letter-spacing: 0.04em;
   color: rgb(255, 255, 255);
+}
+.products__text::before {
+  content: "";
+  background-image: url(../images/mobile/elipse.svg);
+  background-size: contain;
+  display: block;
+  width: 28px;
+  height: 6px;
+  background-repeat: no-repeat;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .products__button {
   margin-bottom: 40px;

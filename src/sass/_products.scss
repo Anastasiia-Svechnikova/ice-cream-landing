@@ -31,17 +31,6 @@
       color: $white-heading-color;
       font-size: 20px;
     }
-
-    &::before {
-      content: '';
-      // background-image: url(../images/mobile/icons.svg#icon-ellipse);
-      background-size: contain;
-      display: block;
-      width: 280px;
-      height: 280px;
-      background-repeat: no-repeat;
-      position: absolute;
-    }
   }
 
   &__list {
@@ -97,16 +86,6 @@
     }
   }
 
-  &__image {
-    position: absolute;
-    top: 0;
-    margin-bottom: 20px;
-  }
-
-  &__icon {
-    margin-bottom: 32px;
-  }
-
   &__text {
     margin-bottom: 32px;
     font-family: 'DM Sans';
@@ -117,6 +96,19 @@
     letter-spacing: 0.04em;
 
     color: $white-heading-color;
+
+    &::before {
+      content: '';
+      background-image: url(../images/mobile/elipse.svg);
+      background-size: contain;
+      display: block;
+      width: 28px;
+      height: 6px;
+      background-repeat: no-repeat;
+      margin-bottom: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__button {
