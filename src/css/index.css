@@ -355,12 +355,9 @@ a {
 }
 @media screen and (min-width: 768px) {
   .products__text {
-    padding-left: 32px;
-    padding-right: 32px;
-    -webkit-line-clamp: 6;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    padding-left: 36px;
+    padding-right: 36px;
+    line-height: 1.8;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -370,10 +367,6 @@ a {
     padding-right: 75px;
     font-size: 16px;
     line-height: 1.8;
-    -webkit-line-clamp: 4;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 }
 .products__text::before {
@@ -387,6 +380,11 @@ a {
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .products__text-hidden {
+    display: none;
+  }
 }
 .products__button {
   margin-bottom: 40px;
