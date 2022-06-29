@@ -62,6 +62,7 @@
     padding-top: 20px;
     &__wrapper {
       display: flex;
+      height: 360px;
       justify-content: space-between;
     }
     &__inner {
@@ -70,7 +71,11 @@
   }
   @include breakpoint(desktop) {
     padding-top: 60px;
+    &__wrapper {
+      height: 501px;
+    }
   }
+
   &__thumb {
     width: 100%;
     margin-bottom: 40px;
@@ -81,7 +86,7 @@
       width: 336px;
     }
     @include breakpoint(desktop) {
-      margin-right: 139px;
+      // margin-right: 139px;
       width: 501px;
     }
   }
