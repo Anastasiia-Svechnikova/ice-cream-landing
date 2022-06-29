@@ -10,7 +10,6 @@
   width: 280px;
   height: 308px;
   background-color: #fafafa;
-  // outline: 1px solid black;
 }
 
 .customer-rew__text {
@@ -19,15 +18,12 @@
   max-width: 157px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'DM Sans';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 2.58;
   text-align: center;
 
   color: #000000;
-
   background-image: repeating-linear-gradient(
     to bottom,
     #fafafa,
@@ -35,6 +31,7 @@
     #e1e1e1 31px
   );
 }
+
 .customer-rew__text::before {
   content: '';
   display: inline-flex;
@@ -46,37 +43,10 @@
   left: -13px;
 }
 
-.customer-rew__text::after {
-  content: '';
-  display: inline-flex;
-  width: 36px;
-  height: 4px;
-  background-image: url(../images/mobile/icon-circle-red.svg),
-    url(../images/mobile/icon-circle-red.svg),
-    url(../images/mobile/icon-circle-red.svg);
-  background-repeat: no-repeat;
-  background-size: 4px;
-  background-position: left, center, right;
-  position: absolute;
-  top: 295px;
-  left: 60px;
-
-  // outline: 1px solid black;
-}
-
-// .customer_3circle {
-//   display: flex;
-//   font-size: 6px;
-//   gap: 10px;
-//   margin-top: 16px;
-// }
-
 .customer__name {
-  font-family: 'DM Sans';
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 186%;
+  line-height: 1.86;
   text-align: center;
   color: #000000;
   margin-top: 36px;
@@ -94,11 +64,9 @@
   display: inline-flex;
   width: 32px;
   height: 4px;
-  // background-color: orange;
   background-image: url(../images/mobile/icon-circle-red_mobile-01x1.svg),
     url(../images/mobile/icon-circle-red_mobile-01x1.svg),
     url(../images/mobile/icon-circle-red_mobile-01x1.svg);
-  // background-image: url(../images/icons.svg#icon-circle-grey);
   background-size: 4px;
   position: absolute;
   background-position: 50% 50%;
