@@ -46,25 +46,30 @@
   left: -13px;
 }
 
-// .customer-rew__text::after {
-//   content: '';
-//   display: inline-flex;
-//   width: 20px;
-//   height: 20px;
-//   background-image: url(../images/icons.svg#icon-circle-red);
-//   position: absolute;
-//   background-size: cover;
-//   background-color: gray;
-//   top: 50%;
-//   left: 50%;
-// }
+.customer-rew__text::after {
+  content: '';
+  display: inline-flex;
+  width: 36px;
+  height: 4px;
+  background-image: url(../images/mobile/icon-circle-red.svg),
+    url(../images/mobile/icon-circle-red.svg),
+    url(../images/mobile/icon-circle-red.svg);
+  background-repeat: no-repeat;
+  background-size: 4px;
+  background-position: left, center, right;
+  position: absolute;
+  top: 295px;
+  left: 60px;
 
-.customer_3circle {
-  display: flex;
-  font-size: 6px;
-  gap: 10px;
-  margin-top: 16px;
+  // outline: 1px solid black;
 }
+
+// .customer_3circle {
+//   display: flex;
+//   font-size: 6px;
+//   gap: 10px;
+//   margin-top: 16px;
+// }
 
 .customer__name {
   font-family: 'DM Sans';
@@ -74,7 +79,7 @@
   line-height: 186%;
   text-align: center;
   color: #000000;
-  margin-top: 16px;
+  margin-top: 36px;
 }
 
 .customer_home-circle {
