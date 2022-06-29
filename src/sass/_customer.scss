@@ -1,3 +1,8 @@
+.section__customer {
+  padding-top: 40px;
+  padding-bottom: 8px;
+}
+
 .customer {
   display: flex;
   flex-direction: column;
@@ -82,6 +87,10 @@
 }
 
 @media screen and (min-width: 767px) {
+  .section__customer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .customer-rew {
     width: 620px;
     height: 164px;
@@ -121,6 +130,10 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .section__customer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .customer-rew {
     width: 1034px;
     height: 138px;

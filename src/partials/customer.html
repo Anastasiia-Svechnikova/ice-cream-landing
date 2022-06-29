@@ -1,8 +1,22 @@
-<section class="section">
+<section class="section__customer">
     <div class="customer container">
 
-<img src="./images/mobile/customer_mobile-01x1.jpg" alt="customer">
-
+        <picture>
+            <source srcset="
+                    ./images/desktop/customer/testimonials1-x1.png    1x,
+                    ./images/desktop/customer/testimonials1-x2.png 2x
+                    " media="(min-width:1280px)" />
+            <source srcset="
+                    ./images/tablet/customer/testimonials1-x1.png    1x,
+                    ./images/tablet/customer/testimonials1-x2.png 2x
+                    " media="(min-width:768px)" />
+            <source srcset="
+                    ./images/mobile/customer/testimonials1-x1.png    1x,
+                    ./images/mobile/customer/testimonials1-x2.png 2x
+                    " media="(min-width:320px)" />
+            <img class="about__image" src="./images/mobile/customer/testimonials1-x1.png" width="100%"
+                alt="Customer" />
+        </picture>
         <div class="customer-rew">
             <div class="customer-rew__text customer-rew__grad">
                 <p class="customer-rew__text-box">Nullam viverra consectetuer.
