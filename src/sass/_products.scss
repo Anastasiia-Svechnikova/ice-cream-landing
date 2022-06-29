@@ -303,6 +303,14 @@
     @media screen and (min-width: 1280px) {
       margin-bottom: 60px;
     }
+
+    &:hover,
+    &:active {
+      border: 2px solid $accent-color;
+    }
+    &:focus {
+      outline-color: $accent-color;
+    }
   }
 }
 
