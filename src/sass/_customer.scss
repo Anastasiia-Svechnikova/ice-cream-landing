@@ -88,3 +88,22 @@
   gap: 18px;
   margin-top: 16px;
 }
+
+.customer-rew__text::after {
+  content: '';
+  display: inline-flex;
+  width: 32px;
+  height: 4px;
+  // background-color: orange;
+  background-image: url(../images/mobile/icon-circle-red_mobile-01x1.svg),
+    url(../images/mobile/icon-circle-red_mobile-01x1.svg),
+    url(../images/mobile/icon-circle-red_mobile-01x1.svg);
+  // background-image: url(../images/icons.svg#icon-circle-grey);
+  background-size: 4px;
+  position: absolute;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: left, center, right;
+  top: 295px;
+  right: 62px;
+}
