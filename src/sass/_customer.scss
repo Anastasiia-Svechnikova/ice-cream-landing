@@ -29,17 +29,22 @@
     #fafafa 30px,
     #e1e1e1 31px
   );
+
+  position: relative;
+  z-index: 2;
 }
 
 .customer-rew__text::before {
   content: '';
-  display: inline-flex;
+  display: block;
   width: 54px;
   height: 40px;
   background-image: url(../images/mobile/“.svg);
   position: absolute;
   top: -15px;
-  left: -13px;
+  left: -10px;
+
+  z-index: -1;
 }
 
 .customer__name {
@@ -98,7 +103,7 @@
     );
   }
   .customer-rew__text::before {
-    left: -52px;
+    left: -48px;
   }
   .customer-rew__text::after {
     top: 132px;
@@ -143,7 +148,7 @@
     margin-top: 36px;
   }
   .customer-rew__text::before {
-    left: -27px;
+    left: -25px;
   }
   .customer-rew__text::after {
     top: 115px;
