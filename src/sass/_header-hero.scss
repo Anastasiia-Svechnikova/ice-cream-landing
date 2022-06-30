@@ -1,8 +1,10 @@
 .header {
+  height: 58px;
   background-color: #ffb8ca;
+
   position: relative;
   &__container {
-    padding-top: 8px;
+    padding-top: 7px;
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,53 @@
       }
     }
   }
+  &__button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    height: 44px;
+    width: 209px;
+    margin: 40px auto 19px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-bg-color;
+    color: $accent-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.29;
+    border-radius: 22px;
+    outline-color: $accent-color;
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+}
+.header__button-icon {
+  margin-left: 16px;
+}
+.nav {
+  &__list {
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+  }
+  &__item {
+    border-top: 1px solid #e18298;
+    &:last-child {
+      border-bottom: 1px solid #e18298;
+    }
+  }
+  &__link {
+    display: inline-block;
+
+    padding: 12px 20px;
+    &--current {
+      color: $accent-color;
+    }
+  }
 }
 
 .logo__image {
@@ -34,10 +83,11 @@
 .header__wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   display: none;
+  padding: 20px 0;
   background-color: #e17992;
   &.is-open {
     display: block;
