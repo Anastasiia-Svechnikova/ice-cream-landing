@@ -54,6 +54,7 @@ a {
   @include breakpoint(tablet) {
     width: $container-size-tablet;
   }
+
   @include breakpoint(desktop) {
     max-width: $container-size-desktop;
     width: $container-size-desktop;
