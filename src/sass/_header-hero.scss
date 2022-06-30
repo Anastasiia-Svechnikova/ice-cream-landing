@@ -81,16 +81,19 @@
   display: block;
 }
 .header__wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 100vw;
   height: 100vh;
-  display: none;
+  //   display: none;
   padding: 20px 0;
   background-color: #e17992;
+  @include transition-single(right);
   &.is-open {
-    display: block;
+    // display: block;
+    right: 0;
+    position: fixed;
   }
 }
 

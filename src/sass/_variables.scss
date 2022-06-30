@@ -65,7 +65,7 @@ $container-padding-desktop: 16px;
   }
 }
 
-@mixin transition-single($property, $time: 250ms, $cubic: $cubic-bezier) {
+@mixin transition-single($property, $time: 250ms, $cubic: ease) {
   transition: $property $time $cubic;
 }
 
@@ -73,7 +73,7 @@ $container-padding-desktop: 16px;
   $property,
   $second-property,
   $time: 250ms,
-  $cubic: $cubic-bezier
+  $cubic: ease
 ) {
   transition: $property $time $cubic, $second-property $time $cubic;
 }
@@ -82,7 +82,7 @@ $container-padding-desktop: 16px;
   $second-property,
   $third-property,
   $time: 250ms,
-  $cubic: $cubic-bezier
+  $cubic: ease
 ) {
   transition: $property $time $cubic, $second-property $time $cubic,
     $third-property $time $cubic;
