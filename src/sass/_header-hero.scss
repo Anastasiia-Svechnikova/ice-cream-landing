@@ -5,6 +5,7 @@
   overflow: hidden;
   @include breakpoint(tablet) {
     height: 80px;
+    // overflow: visible;
   }
   @include breakpoint(desktop) {
     height: 90px;
@@ -17,6 +18,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: #ffb8ca;
+    @include breakpoint(tablet) {
+      overflow: visible;
+    }
 
     @media screen and (min-width: 768px) {
       position: relative;
@@ -26,7 +30,7 @@
     }
   }
   &-menu__button {
-    z-index: 2;
+    z-index: 3;
     display: block;
     border: none;
     background-color: transparent;
@@ -115,6 +119,8 @@
       }
 
       &__link {
+        position: relative;
+        z-index: 1;
         display: block;
         font-family: 'DM Sans';
         color: $primary-bg-color;
@@ -190,7 +196,7 @@
 }
 .header__wrapper {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   top: 0;
   right: -100%;
@@ -220,7 +226,7 @@
       height: 444px;
       padding-top: 136px;
       padding-bottom: 158px;
-      background-image: url(../images/mobile/header/ice-cream-mobile-x1.png);
+      //   background-image: url(../images/mobile/header/ice-cream-mobile-x1.png);
       background-position: right 15% bottom 0;
       background-repeat: no-repeat;
       position: relative;
@@ -232,10 +238,6 @@
     padding-bottom: 0;
     &__container {
       position: relative;
-      background-image: url(../images/tablet/header/girl-tablet-x1.png);
-      background-position: right 32px bottom 0;
-      background-repeat: no-repeat;
-      height: 320px;
     }
   }
   @include breakpoint(desktop) {
@@ -244,10 +246,6 @@
     padding-bottom: 0;
     &__container {
       position: relative;
-      background-image: url(../images/desktop/header/girl-desktop-x1.png);
-      background-position: right 32px bottom 0;
-      background-repeat: no-repeat;
-      height: 517px;
     }
   }
 
@@ -272,6 +270,10 @@
     font-size: 26px;
     line-height: 1.15;
     margin-bottom: 20px;
+    @include breakpoint-max(mobile) {
+      position: relative;
+      z-index: 1;
+    }
     @include breakpoint(tablet) {
       max-width: 162px;
       font-size: 22px;
@@ -321,12 +323,88 @@
 }
 .hero__inner {
   margin-bottom: 20px;
+
+  @include breakpoint-max(mobile) {
+    z-index: 1;
+    position: relative;
+  }
+
   @include breakpoint(desktop) {
     margin-bottom: 40px;
   }
 }
 .hero__description {
   display: none;
+}
+
+.circle {
+  height: 345px;
+  width: 345px;
+  background-color: rgba(255, 165, 186, 1);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 75px;
+  left: 16px;
+  @include breakpoint(tablet) {
+    width: 355px;
+    height: 355px;
+    bottom: 25px;
+    left: 230px;
+  }
+  @include breakpoint(desktop) {
+    width: 534px;
+    height: 534px;
+    bottom: 35px;
+    left: 517px;
+  }
+}
+.ice-cream {
+  position: absolute;
+  top: 0;
+  //   z-index: ;
+  height: 444px;
+  width: 300px;
+
+  background-image: url(../images/mobile/header/ice-cream-mobile-x1.png);
+  background-position: right 15% bottom 0;
+  background-repeat: no-repeat;
+  @include breakpoint(tablet) {
+    background-image: url(../images/tablet/header/ice-cream-tablet-x1.png);
+    height: 336px;
+    width: 143px;
+    top: -16px;
+    left: 332px;
+  }
+  @include breakpoint(desktop) {
+    height: 557px;
+    width: 236px;
+    background-repeat: no-repeat;
+    background-image: url(../images/desktop/header/ice-cream-desktop-x1.png);
+    top: -40px;
+    left: 624px;
+  }
+}
+.girl {
+  @include breakpoint(tablet) {
+    position: absolute;
+    background-image: url(../images/tablet/header/girl-tablet-x1.png);
+    background-position: right 32px bottom 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    width: 240px;
+    bottom: -14px;
+    right: 0;
+  }
+  @include breakpoint(desktop) {
+    background-image: url(../images/desktop/header/girl-desktop-x1.png);
+
+    background-repeat: no-repeat;
+    height: 241px;
+    width: 354px;
+    bottom: -52px;
+    right: -20px;
+  }
 }
 .filiation {
   display: none;
@@ -337,10 +415,6 @@
     max-width: 100%;
     // height: 416px;
     // background-color: #ffb8ca;
-    background-repeat: no-repeat;
-    background-image: url(../images/tablet/header/ice-cream-tablet-x1.png);
-
-    background-position: left 52% bottom 0;
   }
 
   // .hero__title {
@@ -390,6 +464,10 @@
     &--text {
       margin-top: 41px;
       margin-left: 154px;
+      @include breakpoint(tablet) {
+        position: relative;
+        z-index: 1;
+      }
       @include breakpoint(desktop) {
         margin-top: 70px;
         margin-left: 216px;
@@ -485,12 +563,8 @@
     max-width: 100%;
     // height: 664px;
     // background-color: #ffb8ca;
-    background-repeat: no-repeat;
-    background-image: url(../images/desktop/header/ice-cream-desktop-x1.png);
-    //   url(../images/desktop/header/girl-desktop-x1.png),
-    //   url(../images/desktop/header/ellipse-desktop-x1.png),
-    //   url(../images/desktop/header/milk-desktop-x1.png);
-    background-position: left 59% bottom 0;
+
+    // background-position: left 59% bottom 0;
     // right 16px bottom 0,
     //   left 517px top 54px, left 16px bottom 60px;
   }
