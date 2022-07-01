@@ -4,10 +4,10 @@
   position: relative;
   overflow: hidden;
   @include breakpoint(tablet) {
-    height: 80px;
+    height: 416px;
   }
   @include breakpoint(desktop) {
-    height: 107px;
+    height: 664px;
   }
   &__container {
     overflow: hidden;
@@ -285,15 +285,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header_a {
-    height: 416px;
-    background-color: #ffb8ca;
-  }
   .hero {
     position: relative;
     max-width: 100%;
-    height: 416px;
-    // background-color: #ffb8ca;
     background-repeat: no-repeat;
     background-image: url(../images/tablet/header/ice-cream-tablet-x1.png),
       url(../images/tablet/header/girl-tablet-x1.png),
