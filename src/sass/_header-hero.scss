@@ -35,6 +35,7 @@
     border: none;
     background-color: transparent;
     padding: 10px;
+    outline-color: $accent-color;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
       //   position: absolute;
@@ -541,6 +542,7 @@
     margin-top: 7px;
     margin-left: 154px;
     line-height: 0;
+    outline-color: $accent-color;
     cursor: pointer;
     @include breakpoint(desktop) {
       margin-left: 216px;
