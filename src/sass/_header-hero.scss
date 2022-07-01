@@ -313,6 +313,10 @@
       margin-left: 10px;
       //   padding: 13px 20px;
     }
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
   }
   &__link--reverse {
     color: $primary-bg-color;
