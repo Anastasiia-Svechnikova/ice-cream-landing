@@ -28,6 +28,9 @@ a {
   font-style: normal;
   color: inherit;
   outline-color: $accent-color;
+  &:active {
+    color: $accent-color;
+  }
 }
 
 .visually-hidden {

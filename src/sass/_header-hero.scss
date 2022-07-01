@@ -23,7 +23,7 @@
     }
 
     @media screen and (min-width: 768px) {
-      position: relative;
+      //   position: relative;
     }
     @include breakpoint(desktop) {
       padding-top: 37px;
@@ -37,7 +37,8 @@
     padding: 10px;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      position: absolute;
+      //   position: absolute;
+      margin-left: 293px;
       right: 177px;
     }
 
@@ -49,6 +50,7 @@
       display: none;
     }
     &.is-open {
+      position: fixed;
       right: 20px;
       .header-menu__burger {
         display: none;
@@ -72,7 +74,7 @@
       font-family: inherit;
       height: 44px;
       width: 156px;
-      margin-left: 32px;
+      //   margin-left: 32px;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -93,8 +95,8 @@
       }
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      position: absolute;
-      right: 0;
+      //   position: absolute;
+      //   right: 0;
     }
 
     @media screen and (min-width: 1280px) {
@@ -197,21 +199,21 @@
 .header__wrapper {
   position: absolute;
   z-index: 2;
-
+  transform: translateX(100%);
   top: 0;
-  right: -100%;
+  right: 0;
   width: 100vw;
   height: 100vh;
   //   display: none;
   padding: 20px 0;
   background-color: #e17992;
-  @include transition-single(right);
+  @include transition-single(transform);
   @include breakpoint(tablet) {
     width: 250px;
   }
   &.is-open {
     // display: block;
-    right: 0;
+    transform: translateX(0);
     position: fixed;
   }
 }
@@ -226,7 +228,7 @@
       height: 444px;
       padding-top: 136px;
       padding-bottom: 158px;
-      //   background-image: url(../images/mobile/header/ice-cream-mobile-x1.png);
+
       background-position: right 15% bottom 0;
       background-repeat: no-repeat;
       position: relative;
@@ -354,7 +356,7 @@
   @include breakpoint(desktop) {
     width: 534px;
     height: 534px;
-    bottom: 35px;
+    bottom: 28px;
     left: 517px;
   }
 }
@@ -364,46 +366,76 @@
   //   z-index: ;
   height: 444px;
   width: 300px;
-
-  background-image: url(../images/mobile/header/ice-cream-mobile-x1.png);
   background-position: right 15% bottom 0;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/mobile/header/ice-cream-mobile-x1.png');
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/header/ice-cream-mobile-x2.png');
+  }
+
   @include breakpoint(tablet) {
-    background-image: url(../images/tablet/header/ice-cream-tablet-x1.png);
     height: 336px;
     width: 143px;
     top: -16px;
     left: 332px;
+    background-image: url('../images/tablet/header/ice-cream-tablet-x1.png');
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/header/ice-cream-tablet-x2.png');
+    }
   }
   @include breakpoint(desktop) {
     height: 557px;
     width: 236px;
-    background-repeat: no-repeat;
-    background-image: url(../images/desktop/header/ice-cream-desktop-x1.png);
     top: -40px;
     left: 624px;
+    background-repeat: no-repeat;
+    background-image: url('../images/desktop/header/ice-cream-desktop-x1.png');
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/header/ice-cream-desktop-x2.png');
+    }
   }
 }
 .girl {
   @include breakpoint(tablet) {
     position: absolute;
-    background-image: url(../images/tablet/header/girl-tablet-x1.png);
-    background-position: right 32px bottom 0;
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 150px;
     width: 240px;
     bottom: -14px;
     right: 0;
+    background-position: right 32px bottom 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/tablet/header/girl-tablet-x1.png');
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/header/girl-tablet-x2.png');
+    }
   }
   @include breakpoint(desktop) {
-    background-image: url(../images/desktop/header/girl-desktop-x1.png);
-
     background-repeat: no-repeat;
     height: 241px;
     width: 354px;
     bottom: -52px;
     right: -20px;
+    background-image: url('../images/desktop/header/girl-desktop-x1.png');
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/header/girl-desktop-x2.png');
+    }
   }
 }
 .filiation {
@@ -450,11 +482,15 @@
     display: inline-block;
     width: 268px;
     height: 154px;
-
-    background-image: url(../images/tablet/header/milk-tablet-x1.png);
     background-repeat: no-repeat;
-    // font-family: 'DM Sans';
-    font-style: normal;
+    background-size: contain;
+    background-image: url('../images/tablet/header/milk-tablet-x1.png');
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/header/milk-tablet-x2.png');
+    }
     font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
@@ -478,8 +514,15 @@
       width: 413px;
       font-size: 14px;
       line-height: 1.4;
-      background-image: url(../images/desktop/header/milk-desktop-x1.png);
+      background-size: contain;
       background-repeat: no-repeat;
+      background-image: url('../images/desktop/header/milk-desktop-x1.png');
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/desktop/header/milk-desktop-x2.png');
+      }
     }
   }
   .hero__arrow {
